@@ -1,0 +1,16 @@
+#!/bin/bash
+
+log='logger.txt'
+green='\e[1;32m'
+
+clear
+
+echo -e "${green}Welcome to Part two this will take about 8+ Minutes to complete."
+echo -e "${green}The time will varry based on your card speed/size mine was 16GB."
+echo -e "${green}When this is done you will be returned to the Install Menu."
+tput sgr0
+
+resize2fs /dev/mmcblk0p1
+cd $HOME/temp/scripts
+./Autoafterexpand
+clear
