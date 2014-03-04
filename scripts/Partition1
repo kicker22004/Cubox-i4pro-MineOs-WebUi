@@ -3,7 +3,7 @@
 log='logger.txt'
 green='\e[1;32m'
 
-
+clear
 echo -e "${green} This is a two step Process and will require a reboot."
 {
 (echo d; echo n; echo p; echo 1; echo; echo; echo w) | fdisk /dev/mmcblk0
