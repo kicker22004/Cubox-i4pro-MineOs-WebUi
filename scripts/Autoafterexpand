@@ -1,0 +1,32 @@
+#!/bin/bash
+
+yellow='\e[1;33m'
+green='\e[1;32m'
+red='\e[0;31m'
+white='\e[1;37m'
+
+Guided='./Guided'
+Autowithgui='./Autogui'
+Autonogui='./FullAuto'
+
+clear
+cd $HOME/temp/scripts
+chmod +x *
+echo -e "${green}"
+echo "Welcome to Cubox-i4pro Webui installer."
+echo -e "${green}"
+echo "1.Guided Install"
+echo "2.Full Auto with GUI"
+echo "3.Full Auto without GUI" 
+#Guided install
+echo -e "${yellow}"
+while true;do
+    read -p "Please select your install method: " abc
+    case $abc in
+         [1] ) "${Guided}"; tput sgr0; break;;
+         [2] ) "${Autowithgui}"; tput sgr0; break;;
+         [3] ) "${Autonogui}"; tput sgr0; break;;
+         [EeQq]* ) echo "Thank You For Trying this out!!"; tput sgr0; exit;;
+         * ) echo -e "${red}"; echo "Please Select one of the options or Exit to quit"; echo -e "${yellow}";;
+ esac
+done
