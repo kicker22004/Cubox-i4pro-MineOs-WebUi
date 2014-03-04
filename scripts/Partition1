@@ -1,0 +1,14 @@
+#!/bin/bash
+
+log='logger.txt'
+green='\e[1;32m'
+
+
+echo -e "${green} This is a two step Process and will require a reboot."
+{
+(echo d; echo n; echo p; echo 1; echo; echo; echo w) | fdisk /dev/mmcblk0
+sleep 4
+} &> "${log}"
+echo -e "${green} Rebooting now, After reboot you will need to run the second part."
+sleep 10
+reboot
