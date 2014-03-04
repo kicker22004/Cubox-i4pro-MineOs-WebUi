@@ -4,7 +4,7 @@ red='\e[0;31m'
 white='\e[1;37m'
 log='logger.txt'
 
-
+clear
 #Caution
 echo -e "${red}"
 while true;do
